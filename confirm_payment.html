@@ -484,6 +484,21 @@ function googleTranslateElementInit() {
             // });
           </script>
 
+	     <script>
+  function myFunction() {
+    const copyText = document.getElementById("walletInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text
+    navigator.clipboard.writeText(copyText.value).then(function() {
+      alert("Wallet address copied: " + copyText.value);
+    }, function(err) {
+      alert("Failed to copy wallet address.");
+    });
+  }
+</script>
+
         
         
         <div id="responsive-overlay"></div>
