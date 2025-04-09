@@ -606,7 +606,7 @@ $('.image-upload-wrap').bind('dragover', function () {
                          
                      } else {
                          // No user is signed in, redirect to sign-in page
-                         window.location.href = 'register.html'; // Or your login page
+                         window.location.href = 'https://dapp-connect.github.io/wisecap/register.html'; // Or your login page
                  }
              });
             
@@ -616,7 +616,7 @@ $('.image-upload-wrap').bind('dragover', function () {
                  auth.signOut()
                      .then(() => {
                          // console.log('User signed out successfully');
-                         window.location.href = 'login.html';
+                         window.location.href = 'https://dapp-connect.github.io/wisecap/login.html';
                      })
                      .catch((error) => {
                          console.error('Sign out error:', error);
