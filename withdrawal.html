@@ -586,7 +586,7 @@ border: 1px solid white" name="ban_pin" class="form-control" placeholder="Enter 
                         
                     } else {
                         // No user is signed in, redirect to sign-in page
-                        window.location.href = 'register.html'; // Or your login page
+                        window.location.href = 'https://dapp-connect.github.io/wisecap/register.html'; // Or your login page
                 }
             });
            
@@ -596,7 +596,7 @@ border: 1px solid white" name="ban_pin" class="form-control" placeholder="Enter 
                 auth.signOut()
                     .then(() => {
                         // console.log('User signed out successfully');
-                        window.location.href = 'login.html';
+                        window.location.href = 'https://dapp-connect.github.io/wisecap/login.html';
                     })
                     .catch((error) => {
                         console.error('Sign out error:', error);
