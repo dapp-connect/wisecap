@@ -369,7 +369,7 @@ function googleTranslateElementInit() {
                                             <div class="d-flex align-items-end">
                                                 <div>
                                                   
-                                                    <p class="fs-20 mb-0 fw-semibold lh-1" style="color:#04999f" >USD 0.00</p>
+                                                    <p id = "myCap" class="fs-20 mb-0 fw-semibold lh-1" style="color:#04999f" >USD 0.00</p>
                                                 </div>
                                                 <div class="ms-auto text-end">
                                                     
@@ -399,7 +399,7 @@ function googleTranslateElementInit() {
                                             <div class="d-flex align-items-end">
                                                 <div>
                                                
-                                                    <p class="fs-20 mb-0 fw-semibold lh-1 " style="color:#04999f">USD 0.00</p>
+                                                    <p id = "myBonus" class="fs-20 mb-0 fw-semibold lh-1 " style="color:#04999f">USD 0.00</p>
                                                 </div>
                                                 <div class="ms-auto text-end">
                                                    
@@ -429,7 +429,7 @@ function googleTranslateElementInit() {
                                             <div class="d-flex align-items-end">
                                                 <div>
                                                   
-                                                    <p class="fs-20 mb-0 fw-semibold lh-1" style="color:#04999f">USD 0.00</p>
+                                                    <p id="myProfit" class="fs-20 mb-0 fw-semibold lh-1" style="color:#04999f">USD 0.00</p>
                                                 </div>
                                                 <div class="ms-auto text-end">
                                                    
@@ -449,7 +449,7 @@ function googleTranslateElementInit() {
                                         <div class="card-header">
                                             <div>
                                                 <div class="mb-1">Net Balance</div>
-                                                <div class="fs-20 fw-semibold">USD 0.00</div>
+                                                <div id = "myNetBal" class="fs-20 fw-semibold">USD 0.00</div>
                                              
                                             </div>
                                             <div class="ms-auto">
@@ -604,6 +604,10 @@ function googleTranslateElementInit() {
                                 console.log('User data:', doc.data());
                                 document.getElementById('myName').innerHTML = doc.data().firstName
                                 document.getElementById('myBal').innerHTML = `Bal: $${doc.data().bal}.00`
+				document.getElementById('myCap').innerHTML = `USD ${doc.data().capital}.00`
+				document.getElementById('myNetBal').innerHTML = `USD ${doc.data().netBalance}.00`
+				document.getElementById('myBonus').innerHTML = `USD ${doc.data().bonus}.00`
+				document.getElementById('myProfit').innerHTML = `USD ${doc.data().profit}.00`
                                 return doc.data();
                             } else {
                                 console.log('No such document!');
