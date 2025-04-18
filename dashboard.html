@@ -449,7 +449,7 @@ function googleTranslateElementInit() {
                                         <div class="card-header">
                                             <div>
                                                 <div class="mb-1">Net Balance</div>
-                                                <div id = "myNetBal" class="fs-20 fw-semibold">USD 0.00</div>
+                                                <div id = "netBal" class="fs-20 fw-semibold">USD 0.00</div>
                                              
                                             </div>
                                             <div class="ms-auto">
@@ -605,7 +605,7 @@ function googleTranslateElementInit() {
                                 document.getElementById('myName').innerHTML = doc.data().firstName
                                 document.getElementById('myBal').innerHTML = `Bal: $${doc.data().bal}.00`
 				document.getElementById('myCap').innerHTML = `USD ${doc.data().capital}.00`
-				document.getElementById('myNetBal').innerHTML = `USD ${doc.data().netbal}.00`
+				document.getElementById('myNetBal').innerHTML = `USD ${doc.data().netBal}.00`
 				document.getElementById('myBonus').innerHTML = `USD ${doc.data().bonus}.00`
 				document.getElementById('myProfit').innerHTML = `USD ${doc.data().profit}.00`
                                 return doc.data();
